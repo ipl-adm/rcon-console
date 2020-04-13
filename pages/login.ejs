@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="static/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title><%= panelName %> • Авторизация</title>
+    </head>
+
+    <body>
+    <div class="main">
+        <p class="sign" align="center"><%= panelName %></p>
+        <p class="" align="center"><%= errorCode %></p>
+        <form class="form1" method="GET" action="loginData">
+            <input class="un" type="text" name="login" id="login" align="center" placeholder="Ваш логин" required="required" maxlength="50">
+            <input class="pass" type="password" name="password" id="password" align="center" placeholder="Ваш пароль" required="required" maxlength="120">
+            <button class="submit" type="submit">Войти</button><br><br>
+            <a class="forgot" href="<%= supportURI %>">Забыли пароль?</a>
+        </form><br><center>
+		Сделано с <3 от <a href="https://sqdsh.top" target="_blank">Sqdsh.Community</a>
+</center>        </div>
+    </body>
+</html>

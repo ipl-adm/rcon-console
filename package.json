@@ -1,0 +1,25 @@
+{
+    "name": "rcon-console",
+    "version": "1.0.0",
+    "description": "Minecraft RCON-консоль сделанная с Express.js и EJS",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "nodemon index.js"
+    },
+    "author": {
+        "name": "Sqdsh.Community",
+        "url": "https://github.com/sqdshcom"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "cookie-parser": "^1.4.4",
+        "cors": "^2.8.5",
+        "discord.js": "^11.5.1",
+        "ejs": "^3.0.1",
+        "express": "^4.17.1",
+        "js-md5": "^0.7.3",
+        "modern-rcon": "^1.0.3",
+        "mysql2": "^2.1.0"
+    }
+}

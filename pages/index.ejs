@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="static/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title><%= panelName %> • Главная</title>
+    </head>
+
+    <body>
+    <div class="main">
+        <p class="sign" align="center"><%= panelName %></p>
+        <p align="center">
+            Привет, <b><%= userData.userLogin %></b>.
+            <br>Ваш уровень доступа: <b><%= (userData.userAccess == 1) ? 'Донатер' : (userData.userAccess == 2) ? 'Менеджер' : (userData.userAccess == 3) ? 'Администратор' : 'Странный..?' %></b>
+            <br>Ваш <a class="wiki" onclick="alert('Токен - ваш идентификатор для сессии в системе. Он содержит в себе зашифрованные данные авторизации вашего аккаунта (логин/пароль | расшифровать никак нельзя).')">токен</a>: <b><%= userData.userToken %></b>
+            <br><br><% if(userData.userAccess > 0) { %>
+                <a href="/console">Консоль</a><br><br>
+            <% } %>
+            <% if(userData.userAccess > 1) { %>
+                <a href="/users">Пользователи</a><br><br>
+            <% } %>
+            <a class="logout" href="/logout">Выйти</a><br><br><br><br>
+			Сделано с <3 от=" <a href=https://sqdsh.top"" target="_blank">Sqdsh.Community</a>
+        </p>
+        </div>
+    </body>
+</html>

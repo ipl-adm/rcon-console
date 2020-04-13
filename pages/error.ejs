@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="static/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title><%= panelName %> • Ошибка</title>
+    </head>
+
+    <body>
+    <div class="main">
+        <p class="sign" align="center"><%= panelName %></p>
+        <p align="center">
+            <%- (error.code == -1) ? '<img width="350" height="150" src="https://sun1-99.userapi.com/EjIcAxiiN7e7iDnMsvhfLkpOwj1ulWIc91NKfw/fXWupCfWlSI.jpg"><br><br>' : console.log('Произошла ошибка при запросе страницы.') %>
+            <%= (error.code == -1) ? 'дiня' : error.message %><br><br><a class="logout" href="/">На главную</a>
+        </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="static/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title><%= panelName %> • Пользователи</title>
+    </head>
+
+    <body>
+    <div class="main">
+        <p class="sign" align="center"><%= panelName %></p>
+        <p class="" align="center"><%= errorCode %></p>
+        <center><table>
+            <thead>
+                <tr>
+                    <th>Логин</th>
+                    <th>Уровень доступа</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach((user) => { %>
+                <%- `<tr><td>${user.userLogin}</td><td>| ${(user.userAccess == 1) ? 'Донатер' : (user.userAccess == 2) ? 'Менеджер' : (user.userAccess == 3) ? 'Администратор' : 'Странный..?'}</td><td>| ${(user.userAccess > 1) ? 'Невозможно' : `<a class="wiki" onclick='if(confirm("Ты здесь главный?") == true) { window.open("/delete?id=${user.id}&token=${userToken}"); window.close(); }'>Удалить</a>`}</td></tr>`; %>
+                <% }); %>
+            </tbody>
+        </table><a href="/register">Регистрация пользователей</a></center><br><br><a class="reg" href="/">• На главную</a>
+        </div>
+    </body>
+</html>

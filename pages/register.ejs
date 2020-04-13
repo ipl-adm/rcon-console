@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="static/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title><%= panelName %> • Регистрация</title>
+    </head>
+
+    <body>
+    <div class="main">
+        <p class="sign" align="center"><%= panelName %></p>
+        <p class="" align="center"><%= errorCode %></p>
+        <form class="form1" method="GET" action="registerData">
+            <input class="un" type="text" name="login" id="login" align="center" placeholder="Логин юзера" required="required" maxlength="50">
+            <input class="pass" type="password" name="password" id="password" align="center" placeholder="Пароль юзера" required="required" maxlength="120">
+            <input class="un" type="text" name="access" id="access" align="center" placeholder="Уровень доступа юзера" required="required" maxlength="120">
+            <input class="un" type="text" name="token" id="token" align="center" placeholder="Ваш токен" value="<%= userToken %>" required="required" hidden="true">
+            <br><button class="reg" type="submit">Регистрация</button><br><br><a class="reg" href="/users">• На главную</a>
+        </form>
+        </div>
+    </body>
+</html>
